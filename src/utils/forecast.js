@@ -13,7 +13,8 @@ const forecast = (latitude, longitude, callback) => {
                 temperature: body.current.temperature,
                 feelslike: body.current.feelslike,
                 description: body.current.weather_descriptions[0],
-                string: body.current.weather_descriptions[0] + '. Ahora mismo hay ' + body.current.temperature + ' grados. La sensación térmica es de ' + body.current.feelslike + ' grados.'
+                humidity: body.current.humidity,
+                string: body.current.weather_descriptions[0] + '. Ahora mismo hay ' + body.current.temperature + ' grados y una humedad de ' + body.current.humidity + '%. La sensación térmica es de ' + body.current.feelslike + ' grados.'
             })
         }
     })
